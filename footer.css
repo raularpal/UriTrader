@@ -1,0 +1,12 @@
+/* Footer Link */
+.footer-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
