@@ -95,21 +95,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const floatingCta = document.querySelector('.floating-cta');
 
     // Show after scrolling past hero
+    const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') || window.location.pathname.split('/').pop() === '';
+
+    // Initial check for non-home pages
+    if (floatingCta && !isHomePage) {
+        floatingCta.classList.add('visible');
+    }
+
     window.addEventListener('scroll', () => {
         if (!floatingCta) return;
-        if (window.scrollY > 300) {
-            floatingCta.classList.add('visible');
+
+        if (isHomePage) {
+            // On Home page, only show after scrolling past Hero
+            if (window.scrollY > 300) {
+                floatingCta.classList.add('visible');
+            } else {
+                floatingCta.classList.remove('visible');
+            }
         } else {
-            floatingCta.classList.remove('visible');
+            // On other pages, ALWAYS show it (ensure it stays visible)
+            floatingCta.classList.add('visible');
         }
     });
 
     if (floatingCta) {
         floatingCta.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector('#pricing').scrollIntoView({
-                behavior: 'smooth'
-            });
+            // Check if #pricing exists on this page
+            const pricingSection = document.querySelector('#pricing');
+            if (pricingSection) {
+                e.preventDefault();
+                pricingSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            // If not found, do nothing and let the <a> tag default behavior work (navigate to href)
         });
     }
 
@@ -163,7 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Attach click events to buttons
     document.querySelectorAll('.btn-primary, .btn-secondary, .btn-nav').forEach(btn => {
-        if (btn.getAttribute('href') && btn.getAttribute('href').startsWith('#')) return; // Ignore internal anchors
+        // If it's a link to another page (not # and not empty), let it navigate
+        if (btn.tagName === 'A' && btn.getAttribute('href') && !btn.getAttribute('href').startsWith('#')) return;
+
+        if (btn.getAttribute('href') && btn.getAttribute('href').startsWith('#')) return; // Ignore internal anchors handled by smooth scroll
 
         btn.addEventListener('click', (e) => {
             e.preventDefault();

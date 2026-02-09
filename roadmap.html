@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader IA - Sistema Multi-Agente de Trading</title>
+    <meta name="description"
+        content="5 Agentes de IA analizan el mercado cada 15 minutos mientras tú trabajas o duermes.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="agents_style.css">
+    <link rel="stylesheet" href="chat_style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cta_style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i> TRADER IA
+        </div>
+        <button class="mobile-toggle" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sistema.html">Sistema</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="roadmap.html#pricing">Precios</a>
+            <a href="faq.html">FAQ</a>
+            <a href="faq.html#about">Sobre Mí</a>
+        </nav>
+    </header>
+
+
+    <!-- Audience -->
+    <section class="audience">
+        <div class="container">
+            <div class="grid-2">
+                <div class="audience-card success">
+                    <h3>✅ IDEAL PARA:</h3>
+                    <ul>
+                        <li>Traders que quieren automatizar análisis</li>
+                        <li>Personas con poco tiempo para trading manual</li>
+                        <li>Quienes buscan sistema transparente (no caja negra)</li>
+                        <li>Traders que valoran gestión de riesgo profesional</li>
+                    </ul>
+                </div>
+                <div class="audience-card warning">
+                    <h3>❌ PROBABLEMENTE NO DEBERÍAS UNIRTE SI:</h3>
+                    <ul>
+                        <li>Buscas un sistema "mágico" sin riesgo de pérdida (No existe)</li>
+                        <li>Quieres dinero rápido sin entender cómo funciona</li>
+                        <li>No tienes 10 minutos para configurar tu cuenta MT5</li>
+                        <li>Esperas ganar el 100% de las veces</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Status -->
+    <section class="status" id="roadmap">
+        <div class="container">
+            <h2>📅 ESTADO DEL PROYECTO</h2>
+            <div class="progress-wrapper">
+                <div class="progress-bar-container">
+                    <div class="progress-fill" style="width: 70%"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>Inicio</span>
+                    <span class="current-status">70% Completado</span>
+                    <span>Lanzamiento</span>
+                </div>
+            </div>
+
+            <div class="status-grid">
+                <div class="status-item done"><i class="fa-solid fa-circle-check"></i> Sistema core funcionando</div>
+                <div class="status-item done"><i class="fa-solid fa-circle-check"></i> 5 agentes operativos</div>
+                <div class="status-item done"><i class="fa-solid fa-circle-check"></i> Integración MT5 + Telegram</div>
+                <div class="status-item working"><i class="fa-solid fa-spinner fa-spin"></i> Dashboard usuario (en
+                    desarrollo)</div>
+                <div class="status-item working"><i class="fa-solid fa-clock"></i> Sistema multi-usuario (próximo)</div>
+                <div class="status-item planned"><i class="fa-regular fa-clipboard"></i> Testing final (4 semanas)</div>
+            </div>
+            <p class="delivery-estimate">ENTREGA ESTIMADA: 6-8 SEMANAS</p>
+        </div>
+    </section>
+
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>ÚNETE A LA LISTA DE ESPERA</h2>
+            <div class="pricing-grid">
+                <!-- Free Tier -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>LISTA GRATIS</h3>
+                        <span class="tag recommended">Recomendado</span>
+                    </div>
+                    <div class="price">€0</div>
+                    <ul class="features">
+                        <li>✅ Notificación launch</li>
+                        <li>✅ Precio especial €97</li>
+                        <li>✅ Sin compromiso</li>
+                        <li>✅ Voz en features</li>
+                    </ul>
+                    <button class="btn-secondary">UNIRME GRATIS</button>
+                </div>
+
+                <!-- Early Access Tier -->
+                <div class="pricing-card premium">
+                    <div class="card-header">
+                        <h3>EARLY ACCESS</h3>
+                        <span class="tag limited">Solo 10 plazas</span>
+                    </div>
+                    <div class="price">€97 <span class="old-price">€197</span></div>
+                    <ul class="features">
+                        <li>✅ Acceso garantizado</li>
+                        <li>✅ Soporte VIP</li>
+                        <li>✅ Garantía devolución</li>
+                        <li>✅ Entrega: 6 semanas</li>
+                    </ul>
+                    <button class="btn-primary btn-early-access" data-plan="early">RESERVAR - €97</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Trader IA. Powered by <a href="https://raularpal.github.io/Arpal_web/" target="_blank"
+                    class="footer-link">Arpal</a></p>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div id="reservationModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Reserva tu Plaza</h3>
+                <p>Únete a la lista de espera exclusiva</p>
+            </div>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="name" placeholder="Tu nombre" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="email" placeholder="tu@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="phone" placeholder="+34 600 000 000" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">Confirmar Reserva</button>
+                <p class="form-footer">Tus datos están seguros. Sin spam.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

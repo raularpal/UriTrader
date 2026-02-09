@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trader IA - Sistema Multi-Agente de Trading</title>
+    <meta name="description"
+        content="5 Agentes de IA analizan el mercado cada 15 minutos mientras tú trabajas o duermes.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="agents_style.css">
+    <link rel="stylesheet" href="chat_style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cta_style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i> TRADER IA
+        </div>
+        <button class="mobile-toggle" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="sistema.html">Sistema</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="roadmap.html#pricing">Precios</a>
+            <a href="faq.html">FAQ</a>
+            <a href="faq.html#about">Sobre Mí</a>
+        </nav>
+    </header>
+
+    
+<!-- Agents Process -->
+    <section class="agents-process" id="agents">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">ARQUITECTURA DEL SISTEMA</span>
+                <h2>ASI FUNCIONAN LOS 5 AGENTES</h2>
+                <p>Un flujo de trabajo inteligente donde cada IA tiene una responsabilidad única antes de tomar
+                    cualquier decisión.</p>
+            </div>
+
+            <div class="agents-grid">
+                <!-- Agent 1 -->
+                <div class="agent-card">
+                    <div class="step-number">01</div>
+                    <div class="agent-icon"><i class="fa-solid fa-chart-area"></i></div>
+                    <h3>Agente Analista</h3>
+                    <div class="agent-details">
+                        <p class="role">Análisis Técnico Puro</p>
+                        <ul>
+                            <li>Rastrea indicadores (RSI, EMA, MACD)</li>
+                            <li>Detecta divergencias y patrones</li>
+                            <li>Monitorea volatilidad (Bollinger)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 2 -->
+                <div class="agent-card">
+                    <div class="step-number">02</div>
+                    <div class="agent-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Agente Sentimiento</h3>
+                    <div class="agent-details">
+                        <p class="role">Análisis Fundamental (GPT-4)</p>
+                        <ul>
+                            <li>Lee noticias financieras en tiempo real</li>
+                            <li>Analiza conferencias de bancos centrales</li>
+                            <li>Filtra ruido vs. datos reales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 3 -->
+                <div class="agent-card">
+                    <div class="step-number">03</div>
+                    <div class="agent-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Agente Decisión</h3>
+                    <div class="agent-details">
+                        <p class="role">El Cerebro Central</p>
+                        <ul>
+                            <li>Combina Técnico + Fundamental</li>
+                            <li>Busca confluencia de datos</li>
+                            <li>Decide: <strong>COMPRA</strong>, <strong>VENTA</strong> o <strong>ESPERA</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 4 -->
+                <div class="agent-card">
+                    <div class="step-number">04</div>
+                    <div class="agent-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Agente Riesgo</h3>
+                    <div class="agent-details">
+                        <p class="role">Protector de Capital</p>
+                        <ul>
+                            <li>Calcula tamaño de posición exacto</li>
+                            <li>Define Stop Loss y Take Profit</li>
+                            <li>Máximo 2% de riesgo por operación</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 5 -->
+                <div class="agent-card">
+                    <div class="step-number">05</div>
+                    <div class="agent-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                    <h3>Agente Ejecución</h3>
+                    <div class="agent-details">
+                        <p class="role">Operador & Notificador</p>
+                        <ul>
+                            <li>Ejecuta orden en MetaTrader 5</li>
+                            <li>Gestiona la operación abierta</li>
+                            <li>Envía alerta detallada a Telegram</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Notification -->
+    <section class="visuals reverse">
+        <div class="container">
+            <div class="split-section reverse-layout">
+                <div class="image-content fade-in-left">
+
+                    <div class="phone-mockup-container">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="chat-interface">
+                                <!-- Chat Header -->
+                                <div class="chat-header">
+                                    <i class="fa-solid fa-arrow-left back-btn"></i>
+                                    <div class="bot-avatar">AI</div>
+                                    <div class="chat-info">
+                                        <span class="chat-name">Trading IA Uri</span>
+                                        <span class="chat-status">bot</span>
+                                    </div>
+                                    <i class="fa-solid fa-ellipsis-vertical back-btn"></i>
+                                </div>
+
+                                <!-- Messages -->
+                                <div class="chat-messages">
+                                    <!-- Message 1: Connect -->
+                                    <div class="message">
+                                        <div class="message-content">
+                                            <p>✅ <strong>Sistema Trading IA Conectado</strong></p>
+                                            <p style="margin-top: 5px; color: #aaa; font-size: 0.85rem;">Recibirás
+                                                notificaciones cuando:</p>
+                                            <ul style="list-style: none; padding: 0; margin: 5px 0;">
+                                                <li>• Se ejecute una operación</li>
+                                                <li>• Se cierre una posición</li>
+                                                <li>• Haya errores importantes</li>
+                                            </ul>
+                                            <p style="margin-top: 8px;">🤖 Sistema activo y funcionando</p>
+                                            <span class="message-time">19:02</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message 2: Cycle Update -->
+                                    <div class="message">
+                                        <div class="message-content">
+                                            <span class="cycle-header">⏳ <strong>Ciclo #29 completado</strong></span>
+                                            <div class="stats-grid">
+                                                <span>💰</span> <span>Balance: $10,172.29</span>
+                                                <span>📊</span> <span>Posiciones: 2</span>
+                                                <span>📋</span> <span>Órdenes: 0</span>
+                                            </div>
+                                            <span class="status-text">Sin señales claras</span>
+                                            <span class="message-time">19:17</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message 3: Cycle Update -->
+                                    <div class="message">
+                                        <div class="message-content">
+                                            <span class="cycle-header">⏳ <strong>Ciclo #30 completado</strong></span>
+                                            <div class="stats-grid">
+                                                <span>💰</span> <span>Balance: $10,172.29</span>
+                                                <span>📊</span> <span>Posiciones: 2</span>
+                                                <span>📋</span> <span>Órdenes: 0</span>
+                                            </div>
+                                            <span class="status-text">Sin señales claras</span>
+                                            <span class="message-time">19:32</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message 4: Execution -->
+                                    <div class="message">
+                                        <div class="message-content">
+                                            <span class="cycle-header" style="color: #4ade80;">🚀 <strong>Ciclo #31
+                                                    completado</strong></span>
+                                            <div class="stats-grid">
+                                                <span>💰</span> <span>Balance: $10,172.29</span>
+                                                <span>📊</span> <span>Posiciones: 2</span>
+                                                <span>📋</span> <span>Órdenes: 1</span>
+                                            </div>
+                                            <span class="status-text"
+                                                style="color: #4ade80; font-weight: bold;">Operaciones ejecutadas</span>
+                                            <span class="message-time">19:47</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Input -->
+                                <div class="chat-input-area">
+                                    <i class="fa-solid fa-paperclip mic-icon"></i>
+                                    <div class="input-field">Missatge</div>
+                                    <i class="fa-regular fa-microphone mic-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-content">
+                    <span class="eyebrow">TRANSPARENCIA TOTAL</span>
+                    <h2>ESTO ES LO QUE RECIBES</h2>
+                    <p>Notificación real del sistema directamente a tu móvil. Cada paso queda registrado.</p>
+                    <div class="highlight-box">
+                        <p>✅ Análisis completo</p>
+                        <p>✅ Parámetros sugeridos</p>
+                        <p>✅ Transparencia total</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- Floating CTA -->
+    <a href="roadmap.html#pricing" class="floating-cta">
+        UNIRME AHORA <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Trader IA. Powered by <a href="https://raularpal.github.io/Arpal_web/" target="_blank"
+                    class="footer-link">Arpal</a></p>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div id="reservationModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h3>Reserva tu Plaza</h3>
+                <p>Únete a la lista de espera exclusiva</p>
+            </div>
+            <form id="reservationForm">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="name" placeholder="Tu nombre" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="email" placeholder="tu@email.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="phone" placeholder="+34 600 000 000" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">Confirmar Reserva</button>
+                <p class="form-footer">Tus datos están seguros. Sin spam.</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
