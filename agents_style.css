@@ -1,6 +1,6 @@
 /* Agents Process Section - New Styles */
 .agents-process {
-    background: linear-gradient(180deg, var(--bg-color) 0%, rgba(79, 70, 229, 0.05) 50%, var(--bg-color) 100%);
+    background: linear-gradient(180deg, var(--bg-color) 0%, rgba(6, 182, 212, 0.05) 50%, var(--bg-color) 100%);
     overflow-x: auto;
     padding-bottom: 2rem;
     /* Add some padding bottom for scrollbar */
@@ -48,7 +48,7 @@
     transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.05);
     border-color: var(--primary);
-    box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.2);
 }
 
 .agent-card.highlight {

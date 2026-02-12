@@ -95,7 +95,8 @@
     font-size: 1.1rem;
 }
 
-.input-wrapper input {
+.input-wrapper input,
+.input-wrapper select {
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
     background: rgba(255, 255, 255, 0.03);
@@ -105,13 +106,23 @@
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s ease;
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    cursor: pointer;
 }
 
-.input-wrapper input:focus {
+.input-wrapper select option {
+    background: #0e1621;
+    color: var(--text-main);
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
     outline: none;
     border-color: var(--primary);
-    background: rgba(79, 70, 229, 0.05);
-    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+    background: rgba(6, 182, 212, 0.05);
+    box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
 }
 
 .btn-primary.full-width {

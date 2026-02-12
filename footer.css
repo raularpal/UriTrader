@@ -10,3 +10,21 @@
     color: var(--accent);
     text-decoration: underline;
 }
+
+/* Footer Disclaimer */
+.footer-disclaimer {
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-disclaimer strong {
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 0.5rem;
+}

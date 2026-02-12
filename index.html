@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trader IA - Sistema Multi-Agente de Trading</title>
+    <title>Trader IA</title>
     <meta name="description"
         content="5 Agentes de IA analizan el mercado cada 15 minutos mientras tú trabajas o duermes.">
 
@@ -22,108 +22,416 @@
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="cta_style.css">
+    <link rel="stylesheet" href="cookie.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
 </head>
 
 <body>
 
     <!-- Header -->
     <header class="header">
-        <div class="logo">
-            <i class="fa-solid fa-brain"></i> TRADER IA
-        </div>
-        <button class="mobile-toggle" aria-label="Menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="sistema.html">Sistema</a>
-            <a href="roadmap.html">Roadmap</a>
-            <a href="roadmap.html#pricing">Precios</a>
-            <a href="faq.html">FAQ</a>
-            <a href="faq.html#about">Sobre Mí</a>
-        </nav>
+        <a href="#home" class="logo">
+            <img src="logo.svg" alt="Trader IA Logo" class="logo-img">
+        </a>
+        <a href="#pricing" class="btn-primary btn-header">UNIRME AHORA</a>
     </header>
 
-    
-<!-- Hero Section -->
+
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <span class="badge">NUEVO LANZAMIENTO</span>
             <h1>SISTEMA MULTI-AGENTE DE <span class="gradient-text">TRADING CON IA</span></h1>
             <p class="tagline">5 Agentes de IA Analizan el Mercado Cada 15 Minutos<br>Mientras Tú Trabajas o Duermes</p>
 
-            <a href="roadmap.html#pricing" class="btn-primary">UNIRME A LA LISTA GRATIS <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#pricing" class="btn-primary">UNIRME A LA LISTA GRATIS <i class="fa-solid fa-arrow-right"></i></a>
             <p class="sub-cta">Sin compromiso • Sin tarjeta • Solo email</p>
         </div>
         <div class="hero-glow"></div>
     </section>
 
-    
-<!-- Problem Section -->
-    <section class="problem" id="problem">
+    <!-- Agents Process -->
+    <section class="agents-process" id="agents">
         <div class="container">
-            <h2>¿CANSADO DE ESTO?</h2>
+            <div class="section-header">
+                <span class="eyebrow">ARQUITECTURA DEL SISTEMA</span>
+                <h2>ASI FUNCIONAN LOS 5 AGENTES</h2>
+                <p>Un flujo de trabajo inteligente donde cada IA tiene una responsabilidad única antes de tomar
+                    cualquier decisión.</p>
+            </div>
+
+            <div class="agents-grid">
+                <!-- Agent 1 -->
+                <div class="agent-card">
+                    <div class="step-number">01</div>
+                    <div class="agent-icon"><i class="fa-solid fa-chart-area"></i></div>
+                    <h3>Agente Analista</h3>
+                    <div class="agent-details">
+                        <p class="role">Análisis Técnico Puro</p>
+                        <ul>
+                            <li>Rastrea indicadores (RSI, EMA, MACD)</li>
+                            <li>Detecta divergencias y patrones</li>
+                            <li>Monitorea volatilidad (Bollinger)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 2 -->
+                <div class="agent-card">
+                    <div class="step-number">02</div>
+                    <div class="agent-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Agente Sentimiento</h3>
+                    <div class="agent-details">
+                        <p class="role">Análisis Fundamental (GPT-4)</p>
+                        <ul>
+                            <li>Lee noticias financieras en tiempo real</li>
+                            <li>Analiza conferencias de bancos centrales</li>
+                            <li>Filtra ruido vs. datos reales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 3 -->
+                <div class="agent-card">
+                    <div class="step-number">03</div>
+                    <div class="agent-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Agente Decisión</h3>
+                    <div class="agent-details">
+                        <p class="role">El Cerebro Central</p>
+                        <ul>
+                            <li>Combina Técnico + Fundamental</li>
+                            <li>Busca confluencia de datos</li>
+                            <li>Decide: <strong>COMPRA</strong>, <strong>VENTA</strong> o <strong>ESPERA</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 4 -->
+                <div class="agent-card">
+                    <div class="step-number">04</div>
+                    <div class="agent-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Agente Riesgo</h3>
+                    <div class="agent-details">
+                        <p class="role">Protector de Capital</p>
+                        <ul>
+                            <li>Calcula tamaño de posición exacto</li>
+                            <li>Define Stop Loss y Take Profit</li>
+                            <li>Máximo 2% de riesgo por operación</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                <!-- Agent 5 -->
+                <div class="agent-card">
+                    <div class="step-number">05</div>
+                    <div class="agent-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                    <h3>Agente Ejecución</h3>
+                    <div class="agent-details">
+                        <p class="role">Operador & Notificador</p>
+                        <ul>
+                            <li>Ejecuta orden en MetaTrader 5</li>
+                            <li>Gestiona la operación abierta</li>
+                            <li>Envía alerta detallada a Telegram</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Notification -->
+    <section class="visuals reverse">
+        <div class="container">
+            <div class="split-section reverse-layout">
+                <div class="image-content fade-in-left">
+
+                    <div class="phone-mockup-container">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="chat-interface">
+                                <!-- Chat Header -->
+                                <div class="chat-header">
+                                    <i class="fa-solid fa-arrow-left back-btn"></i>
+                                    <div class="bot-avatar">AI</div>
+                                    <div class="chat-info">
+                                        <span class="chat-name">Trading IA</span>
+                                        <span class="chat-status">bot</span>
+                                    </div>
+                                    <i class="fa-solid fa-ellipsis-vertical back-btn"></i>
+                                </div>
+
+                                <!-- Messages -->
+                                <div class="chat-messages">
+                                    <!-- Message 1: System Connected -->
+                                    <div class="message">
+                                        <div class="message-content">
+                                            <p style="font-weight: bold; font-size: 0.95rem; margin-bottom: 5px;">✅
+                                                Sistema Trading IA Conectado</p>
+                                            <p style="margin-bottom: 5px;">Recibirás notificaciones cuando:</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0 0 8px 0;">
+                                                <li>• Se ejecute una operación</li>
+                                                <li>• Se cierre una posición</li>
+                                                <li>• Haya errores importantes</li>
+                                            </ul>
+                                            <p>🤖 Sistema activo y funcionando</p>
+                                            <span class="message-time">20:38</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Message 2: System Initiated -->
+                                    <div class="message">
+                                        <div class="message-content">
+                                            <p style="font-weight: bold; margin-bottom: 8px;">Sistema iniciado - v2.1
+                                                OPTIMIZADO</p>
+
+                                            <p style="font-weight: bold; margin-bottom: 2px;">Configuracion profesional:
+                                            </p>
+                                            <ul style="list-style: none; padding: 0; margin: 0 0 8px 0;">
+                                                <li>- Timeframes: M15 + H1 (institucional)</li>
+                                                <li>- Risk/Reward: 1:1.8</li>
+                                                <li>- Umbral operacion: 60%</li>
+                                                <li>- Max posiciones: 6</li>
+                                                <li>- Pares: 6</li>
+                                            </ul>
+
+                                            <p style="font-weight: bold; margin-bottom: 2px;">Pesos:</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0 0 8px 0;">
+                                                <li>- Tecnico: 85%</li>
+                                                <li>- Fundamental: 15%</li>
+                                            </ul>
+
+                                            <p style="margin-bottom: 8px;">
+                                                Objetivo: 5-8 senales/dia alta calidad<br>
+                                                Win rate esperado: 63-67%
+                                            </p>
+
+                                            <p style="margin-bottom: 8px;">Modo: DEMO</p>
+
+                                            <p style="font-weight: bold; margin-bottom: 2px;">Notificaciones:</p>
+                                            <ul style="list-style: none; padding: 0; margin: 0 0 8px 0;">
+                                                <li>- Inmediata si ejecuta orden</li>
+                                                <li>- Cada hora si no hay operaciones</li>
+                                                <li>- Senales informativas (45-59%)</li>
+                                            </ul>
+
+                                            <p>Sistema listo para operar</p>
+                                            <span class="message-time">20:38</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Input -->
+                                <div class="chat-input-area">
+                                    <i class="fa-solid fa-paperclip mic-icon"></i>
+                                    <div class="input-field">Missatge</div>
+                                    <i class="fa-regular fa-microphone mic-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-content">
+                    <span class="eyebrow">TRANSPARENCIA TOTAL</span>
+                    <h2>ESTO ES LO QUE RECIBES</h2>
+                    <p>Notificación real del sistema directamente a tu móvil. Cada paso queda registrado.</p>
+                    <div class="highlight-box">
+                        <p>✅ Análisis completo</p>
+                        <p>✅ Parámetros sugeridos</p>
+                        <p>✅ Transparencia total</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience -->
+    <section class="audience">
+        <div class="container">
             <div class="grid-2">
-                <div class="card-danger">
-                    <i class="fa-solid fa-xmark"></i>
-                    <p>Pasar horas analizando gráficos manualmente</p>
+                <div class="audience-card success">
+                    <h3>✅ IDEAL PARA:</h3>
+                    <ul>
+                        <li>Traders que quieren automatizar análisis</li>
+                        <li>Personas con poco tiempo para trading manual</li>
+                        <li>Quienes buscan sistema transparente (no caja negra)</li>
+                        <li>Traders que valoran gestión de riesgo profesional</li>
+                    </ul>
                 </div>
-                <div class="card-danger">
-                    <i class="fa-solid fa-xmark"></i>
-                    <p>Perder oportunidades porque estabas ocupado</p>
-                </div>
-                <div class="card-danger">
-                    <i class="fa-solid fa-xmark"></i>
-                    <p>Trading emocional sin plan claro</p>
-                </div>
-                <div class="card-danger">
-                    <i class="fa-solid fa-xmark"></i>
-                    <p>No saber cuándo entrar o salir</p>
+                <div class="audience-card warning">
+                    <h3>❌ PROBABLEMENTE NO DEBERÍAS UNIRTE SI:</h3>
+                    <ul>
+                        <li>Buscas un sistema "mágico" sin riesgo de pérdida (No existe)</li>
+                        <li>Quieres dinero rápido sin entender cómo funciona</li>
+                        <li>No tienes 10 minutos para configurar tu cuenta MT5</li>
+                        <li>Esperas ganar el 100% de las veces</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    
-<!-- Solution Section -->
-    <section class="solution" id="features">
+    <!-- Project Status -->
+    <section class="status" id="roadmap">
         <div class="container">
-            <h2>SISTEMA QUE:</h2>
-            <div class="grid-4">
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
-                    <h3>🧠 ANALIZA</h3>
-                    <p>5 agentes procesan datos técnicos + noticias reales. Cada 15 minutos, automáticamente.</p>
+            <h2>📅 ESTADO DEL PROYECTO</h2>
+            <div class="progress-wrapper">
+                <div class="progress-bar-container">
+                    <div class="progress-fill" style="width: 70%"></div>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>📊 DECIDE</h3>
-                    <p>Combina análisis técnico + GPT-4 con noticias. Señales claras: COMPRA / VENDE / ESPERA.</p>
+                <div class="progress-labels">
+                    <span>Inicio</span>
+                    <span class="current-status">70% Completado</span>
+                    <span>Lanzamiento</span>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>🎯 GESTIONA</h3>
-                    <p>Riesgo profesional automático. 2% máximo por operación.</p>
+            </div>
+
+            <div class="status-grid">
+                <div class="status-item done"><i class="fa-solid fa-circle-check"></i> Sistema core funcionando</div>
+                <div class="status-item done"><i class="fa-solid fa-circle-check"></i> 5 agentes operativos</div>
+                <div class="status-item done"><i class="fa-solid fa-circle-check"></i> Integración MT5 + Telegram</div>
+                <div class="status-item working"><i class="fa-solid fa-spinner fa-spin"></i> Dashboard usuario (en
+                    desarrollo)</div>
+                <div class="status-item working"><i class="fa-solid fa-clock"></i> Sistema multi-usuario (próximo)</div>
+                <div class="status-item planned"><i class="fa-regular fa-clipboard"></i> Testing final (4 semanas)</div>
+            </div>
+            <p class="delivery-estimate">ENTREGA ESTIMADA: 6-8 SEMANAS</p>
+        </div>
+    </section>
+
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>ÚNETE A LA LISTA DE ESPERA</h2>
+            <div class="pricing-grid">
+                <!-- Free Tier -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>LISTA GRATIS</h3>
+                        <span class="tag recommended">Recomendado</span>
+                    </div>
+                    <div class="price">€0</div>
+                    <ul class="features">
+                        <li>✅ Notificación launch</li>
+                        <li>✅ Precio especial €97</li>
+                        <li>✅ Sin compromiso</li>
+                        <li>✅ Voz en features</li>
+                    </ul>
+                    <button class="btn-secondary">UNIRME GRATIS</button>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-brands fa-telegram"></i></div>
-                    <h3>📱 NOTIFICA</h3>
-                    <p>Recibes alertas Telegram con análisis completo.</p>
+
+                <!-- Early Access Tier -->
+                <div class="pricing-card premium">
+                    <div class="card-header">
+                        <h3>EARLY ACCESS</h3>
+                        <span class="tag limited">Solo 10 plazas</span>
+                    </div>
+                    <div class="price">€97 <span class="old-price">€197</span></div>
+                    <ul class="features">
+                        <li>✅ Acceso garantizado</li>
+                        <li>✅ Soporte VIP</li>
+                        <li>✅ Garantía devolución</li>
+                        <li>✅ Entrega: 6 semanas</li>
+                    </ul>
+                    <button class="btn-primary btn-early-access" data-plan="early">RESERVAR - €97</button>
                 </div>
             </div>
         </div>
     </section>
 
-    
-<!-- Floating CTA -->
-    <a href="roadmap.html#pricing" class="floating-cta">
-        UNIRME AHORA <i class="fa-solid fa-arrow-right"></i>
-    </a>
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>PREGUNTAS FRECUENTES</h2>
+            <div class="faq-grid">
+                <!-- FAQ Item 1: Features -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h4>¿Qué características tiene el sistema?</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        <div class="grid-4" style="margin-top: 1.5rem;">
+                            <div class="feature-card">
+                                <div class="icon-box"><i class="fa-solid fa-microchip"></i></div>
+                                <h3>🧠 ANALIZA</h3>
+                                <p>5 agentes procesan datos técnicos + noticias reales. Cada 15 minutos,
+                                    automáticamente.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
+                                <h3>📊 DECIDE</h3>
+                                <p>Combina análisis técnico + GPT-4 con noticias. Señales claras: COMPRA / VENDE /
+                                    ESPERA.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                                <h3>🎯 GESTIONA</h3>
+                                <p>Riesgo profesional automático. 2% máximo por operación.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="icon-box"><i class="fa-brands fa-telegram"></i></div>
+                                <h3>📱 NOTIFICA</h3>
+                                <p>Recibes alertas Telegram con análisis completo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2: Tech Stack -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h4>¿Qué tecnología utiliza?</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        <div class="tech-grid" style="margin-top: 1.5rem;">
+                            <div class="tech-item"><i class="fa-brands fa-python"></i> Python Multi-Agente</div>
+                            <div class="tech-item"><i class="fa-solid fa-robot"></i> OpenAI GPT-4</div>
+                            <div class="tech-item"><i class="fa-solid fa-newspaper"></i> NewsAPI</div>
+                            <div class="tech-item"><i class="fa-solid fa-chart-simple"></i> MetaTrader 5</div>
+                            <div class="tech-item"><i class="fa-brands fa-telegram"></i> Telegram API</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3: Other -->
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h4>¿Garantiza resultados positivos?</h4>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Trading de divisas conlleva riesgo sustancial de pérdida.<br>
+                            Este sistema es herramienta de análisis, NO asesoramiento financiero.<br>
+                            Resultados pasados no garantizan resultados futuros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <footer>
         <div class="container">
             <p>&copy; 2026 Trader IA. Powered by <a href="https://raularpal.github.io/Arpal_web/" target="_blank"
                     class="footer-link">Arpal</a></p>
+
         </div>
     </footer>
 
@@ -153,16 +461,38 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Teléfono</label>
+                    <label for="metatrader">¿Dispones de cuenta MetaTrader 5?</label>
                     <div class="input-wrapper">
-                        <i class="fa-solid fa-phone"></i>
-                        <input type="tel" id="phone" placeholder="+34 600 000 000" required>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <select id="metatrader" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down"
+                            style="left: auto; right: 1rem; pointer-events: none; font-size: 0.8rem;"></i>
                     </div>
                 </div>
 
                 <button type="submit" class="btn-primary full-width">Confirmar Reserva</button>
                 <p class="form-footer">Tus datos están seguros. Sin spam.</p>
             </form>
+        </div>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-overlay">
+        <div class="cookie-card">
+            <div class="cookie-icon-wrapper">
+                <i class="fa-solid fa-cookie-bite"></i>
+            </div>
+            <h3>Aceptación de Cookies</h3>
+            <p>Utilizamos cookies para garantizar la mejor experiencia en nuestra web. Al continuar, aceptas su uso para
+                análisis y contenido personalizado. <a href="#">Leer más</a></p>
+            <div class="cookie-actions">
+                <button id="acceptCookies" class="btn-primary full-width">Aceptar Todas</button>
+                <button id="cookiePreferences" class="btn-text">Preferencias</button>
+            </div>
         </div>
     </div>
 

@@ -1,5 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Cookie Consent Logic
+    const cookieOverlay = document.getElementById('cookieConsent');
+    const acceptCookiesBtn = document.getElementById('acceptCookies');
+    const cookiePrefsBtn = document.getElementById('cookiePreferences');
+
+    function checkCookieConsent() {
+        if (!localStorage.getItem('cookieConsent')) {
+            // Show modal after a short delay
+            setTimeout(() => {
+                cookieOverlay.classList.add('active');
+            }, 1000);
+        }
+    }
+
+    if (acceptCookiesBtn) {
+        acceptCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            cookieOverlay.classList.remove('active');
+        });
+    }
+
+    if (cookiePrefsBtn) {
+        cookiePrefsBtn.addEventListener('click', () => {
+            // For now, treat as accept or just close, until a preferences modal is built.
+            // Given the request was just "add a tab to accept", we'll just close it.
+            cookieOverlay.classList.remove('active');
+        });
+    }
+
+    checkCookieConsent();
+
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -10,36 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile Menu Logic
-    const toggleBtn = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('nav');
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'nav-overlay';
-    document.body.appendChild(overlay);
 
-    function toggleMenu() {
-        nav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        const icon = toggleBtn.querySelector('i');
-        if (nav.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-xmark');
-        } else {
-            icon.classList.remove('fa-xmark');
-            icon.classList.add('fa-bars');
-        }
-    }
-
-    toggleBtn.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', toggleMenu);
-
-    // Close menu when clicking a link
-    nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (nav.classList.contains('active')) toggleMenu();
-        });
-    });
 
     // Intersection Observer for Fade-in Animations
     const observerOptions = {
@@ -209,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
+        const metatrader = document.getElementById('metatrader').value;
 
         const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.textContent;
@@ -222,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData();
         formData.append('nombre', name);
         formData.append('email', email);
-        formData.append('telefono', phone);
+        formData.append('metatrader_5', metatrader);
         formData.append('tipo_plan', currentPlan === 'early' ? 'Early Access (€97)' : 'Lista Espera (Free)');
         formData.append('fecha', new Date().toLocaleString());
 
@@ -273,4 +275,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.disabled = false;
             });
     });
+    // FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const header = item.querySelector('.faq-header');
+        // Only if header exists (to avoid errors on pages without FAQ)
+        if (header) {
+            header.addEventListener('click', () => {
+                // Close other items (accordion behavior - optional but cleaner)
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-body').style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+                const body = item.querySelector('.faq-body');
+
+                if (item.classList.contains('active')) {
+                    body.style.maxHeight = (body.scrollHeight + 200) + "px";
+                } else {
+                    body.style.maxHeight = null;
+                }
+            });
+        }
+    });
+
 });
