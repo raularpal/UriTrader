@@ -31,7 +31,7 @@
 
 /* Social Links */
 .social-link {
-    color: var(--text-muted);
+    color: var(--text-main);
     font-size: 1.5rem;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -45,8 +45,8 @@
 }
 
 .social-link:hover {
-    color: var(--primary);
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent);
+    background: rgba(6, 182, 212, 0.1);
     border-color: var(--card-border);
     transform: translateY(-3px);
     text-decoration: none !important;

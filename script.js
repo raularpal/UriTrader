@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Force scroll to top on refresh/load
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
+
     // Cookie Consent Logic
     const cookieOverlay = document.getElementById('cookieConsent');
     const acceptCookiesBtn = document.getElementById('acceptCookies');
